@@ -1,0 +1,44 @@
+/*@import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');*/
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+
+
+* {
+    margin: 0;
+    padding: 10px;
+  }
+
+body {
+    display: flex;
+    background: black;
+    background-size: 20%;
+    background-image: url(../LOGOS/LOGOS/LOGOS/LOGOICON.png); 
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 1920px;
+    height: 1080px;
+    color: rgb(255, 255, 255);
+    font-family: 'Press Start 2P', cursive;
+
+    /*font-family: 'Audiowide', cursive;*/
+  }
+
+
+#hostname {
+    align-self: flex-start;
+    margin: 0 0 0 auto;
+    font-size: 1rem;
+    border: 3px solid rgb(7, 63, 100);
+    border-radius: 20px;
+    box-shadow: 0 0 25px rgb(43, 66, 158);
+}
+
+#ip1 {
+    align-self: flex-end;
+    align-content: center;
+    margin: 0 0 0 auto;
+    font-size: 1rem;
+    border: 3px solid rgb(7, 63, 100);
+    border-radius: 20px;
+    box-shadow: 0 0 25px rgb(43, 66, 158);
+}
