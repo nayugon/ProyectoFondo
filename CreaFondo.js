@@ -22,6 +22,8 @@ const html = fs.readFileSync("./index.html", function (err, html) {
     html: html.toString("utf-8"),
   }).then(() => {
     console.log("The image was created successfully!");
+
+    /*
     //Remove last wallpaper image file if exists
     wallpaper.get().then((oldFile) => {
       if (oldFile.includes("wallpaper")) {
@@ -33,10 +35,14 @@ const html = fs.readFileSync("./index.html", function (err, html) {
           console.log("Last image successfully removed");
         });
       }
+      */
     });
 
+    /*
     // Set wallpaper with new image
     wallpaper.set(imgPath).then((err) => {
       console.log("Wallpaper set successfully");
     });
-  });
+    */
+
+
