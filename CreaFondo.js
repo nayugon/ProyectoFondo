@@ -1,4 +1,5 @@
 const fs = require("fs");
+const os =require("os");
 const path = require("path");
 const nodeHtmlToImage = require("node-html-to-image");
 //const wallpaper = require("wallpaper");
@@ -12,14 +13,18 @@ const html = fs.readFileSync("./index.html", function (err, html) {
   }
   return html;
 });
-
+prueba=html.toString();
+console.log(os.hostname());
+prueba= prueba.replace("HOSTNAME001", os.hostname());
+console.log(prueba);
 
   const imgPath = `./wallpaperDPTO.png`;
 
   // Create image from html file
   nodeHtmlToImage({
     output: imgPath,
-    html: html.toString("utf-8"),
+    html: prueba,
+    //html: html.toString("utf-8"),
   }).then(() => {
     console.log("The image was created successfully!");
 
