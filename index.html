@@ -23,8 +23,8 @@ body {
     padding: 55px;
     display: flex;
     background: black;
-    
-    background-image: url("./LOGOS/LOGOS/F\ y\ L/Fondo informática.jpg"); 
+    justify-content: space-between;
+    background-image: url("fondo.jpg"); 
     background-repeat: no-repeat;
     background-position: center;
     width: 1760px;
@@ -35,33 +35,33 @@ body {
     /*font-family: 'Audiowide', cursive;*/
   }
 
+p {
+    font-size: 1rem;
+    border: 3px solid rgb(7, 63, 100);
+    border-radius: 20px;
+    box-shadow: 0 0 25px rgb(43, 66, 158);
+}
 
 #hostname {
     position: absolute;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-size: 1rem;
-    border: 3px solid rgb(7, 63, 100);
-    border-radius: 20px;
-    box-shadow: 0 0 25px rgb(43, 66, 158);
+}
+
+#version {
+    align-self: flex-end;    
 }
 
 #ip1 {
     align-self: flex-end;
     text-align: center;
     margin: 0 0 0 auto;
-    font-size: 1rem;
-    border: 3px solid rgb(7, 63, 100);
-    border-radius: 20px;
-    box-shadow: 0 0 25px rgb(43, 66, 158);
+    
 }
 
     </style>
-        <p id="hostname"> HOSTNAME001 </p>
-        <p id="ip1">eth0: 192.168.1.XXX <br><br>
-            eth1: 192.168.1.XXX <br><br>
-            <br>
-            EscritorioDPTOINFJMPP.v.1.0
-        </p>
+        <p id="hostname"> HOST </p>
+        <p id="version">FondoDPTOINFJMPP.v0.1.0</p>
+        <p id="ip1">NET</p>
 </body>
 </html>

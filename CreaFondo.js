@@ -1,3 +1,16 @@
+
+function interfacesRed(){
+  const listado = Object.keys(os.networkInterfaces());
+  return listado.filter(element => element.includes("Eth"));
+}
+
+function getIP(interfaz){
+    const dir = os.networkInterfaces()[interfaz];
+    const ipV4 = (dir.filter(element=>element.family==('IPv4')));
+    return ipV4[0].address;
+    //return dir.forEach(element => {if(element.family==('IPv4')){console.log(element.address); return element.address}})
+}
+
 const fs = require("fs");
 const os =require("os");
 const path = require("path");
@@ -13,10 +26,20 @@ const html = fs.readFileSync("./index.html", function (err, html) {
   }
   return html;
 });
+
+const image = fs.readFileSync('./LOGOS/LOGOS/F y L/Fondo informática.jpg');
+const base64Image = new Buffer.from(image).toString('base64');
+const dataURI = 'data:image/jpeg;base64,' + base64Image
+
 prueba=html.toString();
 console.log(os.hostname());
-prueba= prueba.replace("HOSTNAME001", os.hostname());
-console.log(prueba);
+prueba= prueba.replace("HOST", os.hostname());
+prueba= prueba.replace("fondo.jpg", dataURI);
+int = interfacesRed();
+red = "";
+int.forEach(element => red+=(`${element}: ${getIP(element)} <br>`));
+
+prueba = prueba.replace("NET", red);
 
   const imgPath = `./wallpaperDPTO.png`;
 
@@ -49,5 +72,3 @@ console.log(prueba);
       console.log("Wallpaper set successfully");
     });
     */
-
-
