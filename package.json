@@ -20,6 +20,7 @@
   "dependencies": {
     "fs": "^0.0.1-security",
     "node-html-to-image": "^3.3.0",
-    "path": "^0.12.7"
+    "path": "^0.12.7",
+    "wallpaper": "^4.4.1"
   }
 }

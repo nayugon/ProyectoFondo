@@ -1,4 +1,4 @@
-
+//import {getWallpaper, setWallpaper} from 'wallpaper';
 function interfacesRed(){
   const listado = Object.keys(os.networkInterfaces());
   return listado.filter(element => element.includes("Eth"));
@@ -15,7 +15,7 @@ const fs = require("fs");
 const os =require("os");
 const path = require("path");
 const nodeHtmlToImage = require("node-html-to-image");
-//const wallpaper = require("wallpaper");
+const wallpaper = require("wallpaper");
 //const cron = require("node-cron");
 //const { v4: uuidv4 } = require("uuid");
 
@@ -66,9 +66,10 @@ prueba = prueba.replace("NET", red);
       */
     });
 
-    /*
+  
     // Set wallpaper with new image
     wallpaper.set(imgPath).then((err) => {
       console.log("Wallpaper set successfully");
     });
-    */
+    
+  
