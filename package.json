@@ -19,6 +19,7 @@
   "homepage": "https://github.com/nayugon/ProyectoFondo#readme",
   "dependencies": {
     "fs": "^0.0.1-security",
+    "node-cron": "^3.0.2",
     "node-html-to-image": "^3.3.0",
     "path": "^0.12.7",
     "wallpaper": "^4.4.1"
