@@ -36,7 +36,7 @@ const base64Image = new Buffer.from(image).toString('base64');
 const dataURI = 'data:image/jpeg;base64,' + base64Image
 
 prueba=html.toString();
-console.log(os.hostname());
+//console.log(os.hostname());
 prueba= prueba.replace("HOST", os.hostname());
 prueba= prueba.replace("fondo.jpg", dataURI);
 int = interfacesRed();
@@ -53,7 +53,7 @@ prueba = prueba.replace("NET", red);
     html: prueba,
     //html: html.toString("utf-8"),
   }).then(() => {
-    console.log("The image was created successfully!");
+    //console.log("The image was created successfully!");
 
     /*
     //Remove last wallpaper image file if exists
@@ -64,7 +64,7 @@ prueba = prueba.replace("NET", red);
             console.error(err);
             return;
           }
-          console.log("Last image successfully removed");
+          //console.log("Last image successfully removed");
         });
       }
       */
@@ -73,7 +73,7 @@ prueba = prueba.replace("NET", red);
   
     // Set wallpaper with new image
     wallpaper.set(imgPath).then((err) => {
-      console.log("Wallpaper set successfully");
+      //console.log("Wallpaper set successfully");
     });
     
   });  
