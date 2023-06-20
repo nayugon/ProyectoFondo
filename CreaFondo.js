@@ -21,7 +21,7 @@ const cron = require("node-cron");
 
 // Running every minute
 
-cron.schedule("* * * * *", () => {
+//cron.schedule("* * * * *", () => {
 
 // Read html file
 const html = fs.readFileSync("./index.html", function (err, html) {
@@ -53,27 +53,13 @@ prueba = prueba.replace("NET", red);
     html: prueba,
     //html: html.toString("utf-8"),
   }).then(() => {
-    //console.log("The image was created successfully!");
-
-    /*
-    //Remove last wallpaper image file if exists
-    wallpaper.get().then((oldFile) => {
-      if (oldFile.includes("wallpaper")) {
-        fs.unlink(oldFile, (err) => {
-          if (err) {
-            console.error(err);
-            return;
-          }
-          //console.log("Last image successfully removed");
-        });
-      }
-      */
-    });
-
-  
     // Set wallpaper with new image
     wallpaper.set(imgPath).then((err) => {
       //console.log("Wallpaper set successfully");
     });
+    });
+
+  
     
-  });  
+    
+ // });  
