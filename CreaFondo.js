@@ -19,8 +19,13 @@ const wallpaper = require("wallpaper");
 const cron = require("node-cron");
 //const { v4: uuidv4 } = require("uuid");
 
-// Running every minute
+const imgPath = `./wallpaperDPTO.png`;
+// Set wallpaper with a previous image
+wallpaper.set(imgPath).then((err) => {
+  console.log("Wallpaper set successfully");
+});
 
+// Running every minute
 cron.schedule("* * * * *", () => {
 
 // Read html file
@@ -36,7 +41,7 @@ const base64Image = new Buffer.from(image).toString('base64');
 const dataURI = 'data:image/jpeg;base64,' + base64Image
 
 prueba=html.toString();
-//console.log(os.hostname());
+console.log(os.hostname());
 prueba= prueba.replace("HOST", os.hostname());
 prueba= prueba.replace("fondo.jpg", dataURI);
 int = interfacesRed();
@@ -44,8 +49,6 @@ red = "";
 int.forEach(element => red+=(`${element}: ${getIP(element)} <br>`));
 
 prueba = prueba.replace("NET", red);
-
-  const imgPath = `./wallpaperDPTO.png`;
 
   // Create image from html file
   nodeHtmlToImage({
@@ -55,11 +58,7 @@ prueba = prueba.replace("NET", red);
   }).then(() => {
     // Set wallpaper with new image
     wallpaper.set(imgPath).then((err) => {
-      //console.log("Wallpaper set successfully");
+      console.log("Wallpaper set successfully");
     });
     });
-
-  
-    
-    
  });  
