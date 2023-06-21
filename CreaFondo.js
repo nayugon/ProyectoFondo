@@ -21,7 +21,7 @@ const cron = require("node-cron");
 
 // Running every minute
 
-//cron.schedule("* * * * *", () => {
+cron.schedule("* * * * *", () => {
 
 // Read html file
 const html = fs.readFileSync("./index.html", function (err, html) {
@@ -62,4 +62,4 @@ prueba = prueba.replace("NET", red);
   
     
     
- // });  
+ });  
