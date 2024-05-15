@@ -1,3 +1,3 @@
 Set WsShell = CreateObject("WScript.Shell")
-WsShell.Run "node ./CreaFondo.js", 1
+WsShell.Run "node C:\DPTOINFJMPP\Wallpaper\CreaFondo.js", 0
 'Set WsShell = Nothing
